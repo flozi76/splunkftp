@@ -14,7 +14,7 @@ RUN mkdir -p /var/run/vsftpd/empty \
  && mkdir -p /etc/vsftpd \
  && mkdir -p /var/ftp \
  && mv /etc/vsftpd.conf /etc/vsftpd.orig \
- && mkdir /etc/service/vsftpd
+ && mkdir -p /etc/service/vsftpd
 	
 RUN mkdir -p /app
 RUN mkdir -p /app/logs
