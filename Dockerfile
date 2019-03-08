@@ -11,9 +11,9 @@ ENV FTP_USER=ftpuser \
     PASV_ADDRESS=florian.zimmermann@post.ch \
     PASV_MIN=21100 \
     PASV_MIN=21100 \
-    UMASK=022
-	SPLUNK_START_ARGS=--accept-license
-	SPLUNK_PASSWORD=Test_1234
+    UMASK=022 \
+	SPLUNK_START_ARGS=--accept-license \
+	SPLUNK_PASSWORD=Test_1234 \
 
 COPY entrypoint.sh /usr/sbin/
 
