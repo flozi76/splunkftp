@@ -15,7 +15,10 @@ ENV FTP_USER=ftpuser \
 
 COPY entrypoint.sh /usr/sbin/
 
-RUN apk update && apk upgrade &&  apk --update --no-cache add vsftpd
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends vsftpd \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN echo "local_enable=YES" >> /etc/vsftpd/vsftpd.conf \
   && echo "chroot_local_user=YES" >> /etc/vsftpd/vsftpd.conf \
