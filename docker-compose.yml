@@ -1,18 +1,20 @@
 version: '2'
 services:
 
-    instance1-vsftpd:
-      image: flozi76/dockerftp
-      container_name: instance1-vsftpd
+    splunkftp:
+      build: 
+        context: .
+      image: splunkftp
+      container_name: splunkftp
       environment:
-        - FTP_USER=ftpuser
-        - FTP_PASS=supersecret
-        - ONLY_UPLOAD=NO
-        - PASV_ENABLE=NO
+      #   - FTP_USER=ftpuser
+      #   - FTP_PASS=supersecret
+      #   - ONLY_UPLOAD=NO
+      #   - PASV_ENABLE=NO
         - SPLUNK_START_ARGS=--accept-license
         - SPLUNK_PASSWORD=Test_1234
 #      volumes:
 #        - /home/foo/dockers/vsftpd/data:/home
       ports:
-        - "8021:21"
+        - "21:21"
         - "8000:8000"

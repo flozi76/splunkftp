@@ -6,8 +6,9 @@ docker pull flozi76/dockerftp
 - compose
 docker-compose up
 
-- start original container:
+- start container:
 docker run -d -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=Test_1234' splunk/splunk:latest
+docker run -d -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=Test_1234' splunkftp
 docker run -d -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=Test_1234' flozi76/dockerftp
 docker run -d -p 20-21:20-21 -p 65500-65515:65500-65515 -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=Test_1234_$' -v /tmp:/var/ftp:ro flozi76/dockerftp
 docker ps
@@ -23,3 +24,17 @@ docker build --no-cache -t demosplunk .
 
 -- run demosplunk image
 docker run -d -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=Test_1234_$' demosplunk
+
+
+-- build image
+docker build . -t splunkftp
+
+-- docker-compose start stop build
+docker-compose up --build
+-- detached mode:
+docker-compose up --build -d
+docker-compose stop
+
+-- vsftpd - bash commands:
+sudo service vsftpd status
+sudo service vsftpd start
