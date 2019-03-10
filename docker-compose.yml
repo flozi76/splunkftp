@@ -15,6 +15,9 @@ services:
         - SPLUNK_PASSWORD=Test_1234
       #volumes:
       #  - /var/ftp/:/var/ftp/
+      # command:
+      #   - entrypoint.sh 
+      #   - ftp-entrypoint.sh
       ports:
         - "21:21"
         - "20:20"
