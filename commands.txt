@@ -38,3 +38,9 @@ docker-compose stop
 -- vsftpd - bash commands:
 sudo service vsftpd status
 sudo service vsftpd start
+sudo etc/init.d/vsftpd restart
+sudo etc/init.d/vsftpd status
+sudo vi var/log/vsftpd.log
+-- ---- vi reload file:
+        :edit 
+sudo vi etc/vsftpd.conf

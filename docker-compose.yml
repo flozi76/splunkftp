@@ -13,8 +13,10 @@ services:
       #   - PASV_ENABLE=NO
         - SPLUNK_START_ARGS=--accept-license
         - SPLUNK_PASSWORD=Test_1234
-#      volumes:
-#        - /home/foo/dockers/vsftpd/data:/home
+      #volumes:
+      #  - /var/ftp/:/var/ftp/
       ports:
         - "21:21"
+        - "20:20"
         - "8000:8000"
+        - "40000-40100:40000-40100"
