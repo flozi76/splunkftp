@@ -1,0 +1,14 @@
+version: '2'
+services:
+
+    splunkftp:
+      image: flozi76/splunkftp
+      container_name: splunkftp
+      environment:
+        - SPLUNK_START_ARGS=--accept-license
+        - SPLUNK_PASSWORD=Test_1234
+      ports:
+        - "21:21"
+        - "20:20"
+        - "8000:8000"
+        - "40000-40100:40000-40100"
