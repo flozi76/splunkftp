@@ -5,7 +5,7 @@ docker pull flozi76/dockerftp
 
 - compose
 docker-compose up
-
+docker-compose up --build -d
 docker-compose -f docker-compose-nobuild.yml up
 
 - start container:
@@ -46,3 +46,18 @@ sudo vi var/log/vsftpd.log
 -- ---- vi reload file:
         :edit 
 sudo vi etc/vsftpd.conf
+
+#clean all:
+# https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+docker system prune -a
+# docker rmi $(docker images -aq)
+# docker stop $(docker ps -a -q)
+docker rm $(docker ps -aq)
+docker volume prune --force
+
+#docker copy config from/to container
+docker cp splunk:/opt/splunk/etc/ ./splunkconfig
+docker cp ./splunkconfig/etc/ splunk:/opt/splunk/
+
+#splunk search
+#*IDECOD | rex ".*(?<identcode>[0-9]{18,18}).*" | table identcode

@@ -1,0 +1,2 @@
+sid,search,"splunk_server","_time","is_realtime","__mv_sid","__mv_search","__mv_splunk_server","__mv__time","__mv_is_realtime"
+"1556349420.3","| copybuckets json=""{\""providers\"": {}, \""vixes\"": {}}""",6317b985e71d,"1556349420.601304",0,,,,,

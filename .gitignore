@@ -1,0 +1,15 @@
+*.html
+*.py
+*.pyo
+*.md
+*.png
+*.meta
+*.json
+*.js
+*.css
+*.pyc
+*.jar
+*.map
+*.spec
+*.cfg
+*.gif

@@ -1,0 +1,6 @@
+sid,search,"splunk_server","_time","is_realtime",provenance,"event_count","exec_time","result_count","scan_count",status,"total_run_time","api_et","api_lt","search_et","search_lt","__mv_sid","__mv_search","__mv_splunk_server","__mv__time","__mv_is_realtime","__mv_provenance","__mv_event_count","__mv_exec_time","__mv_result_count","__mv_scan_count","__mv_status","__mv_total_run_time","__mv_api_et","__mv_api_lt","__mv_search_et","__mv_search_lt"
+"1556350522.3","search source=""/var/logdata/*"" host=""d9153f6a3d41""",d9153f6a3d41,"1556350522.976817",0,"UI:Search",0,1556350523,0,0,completed,"0.246",,,,,,,,,,,,,,,,,,,,
+"1556350529.4","search source=""/var/logdata/*"" host=""d9153f6a3d41""",d9153f6a3d41,"1556350529.716452",0,"UI:Search",0,1556350529,0,0,completed,"0.154",,,,,,,,,,,,,,,,,,,,
+"rt_md_1556350546.5","| metadata type=sourcetypes | search totalCount > 0",d9153f6a3d41,"1556350546.708615",1,"UI:Search",,,,,,,,,,,,,,,,,,,,,,,,,,
+"1556350553.8","search *",d9153f6a3d41,"1556350553.651643",0,"UI:Search",0,1556350553,0,0,completed,"0.08","1556262000.000000000","1556350553.000000000","1556262000.000000000","1556350553.000000000",,,,,,,,,,,,,,,,
+"1556350557.9","search *",d9153f6a3d41,"1556350557.554558",0,"UI:Search",400,1556350557,400,400,completed,"0.164",,,,,,,,,,,,,,,,,,,,
